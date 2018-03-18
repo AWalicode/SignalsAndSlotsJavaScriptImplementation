@@ -49,7 +49,7 @@ class Child extends SignalSlot{
 			this.candyLimit = 5;
 		}
 	}
-    //Signals ===================================================================
+	//Signals ===================================================================
 		signal_limitOfCandiesReached(logicValue){}
 		signal_giveMeBagOfCandy(){}
 	//===========================================================================
@@ -70,7 +70,7 @@ class Child extends SignalSlot{
 		}catch(CandiesNoFound){
 			alert("Child: Where is my bag of candies?????")
 			//starting the signal=========================================
-				this.signal_giveMeBagOfCandy(true);
+				this.signal_giveMeBagOfCandy();
 			//============================================================
 		}
 	}
