@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pl">
+	<head>
+	  <meta charset="utf-8">
+	  <title>Signals and slots</title>
+	  <link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+
+		<div id=app></div>
+		<script src="app.js"></script>
+		<script type="text/javascript">
+			let candyLimit = 5;
+
+			let child = new Child(candyLimit);
+			let candyBag = new CandyBag();
+			let mom = new Parent(child, candyBag);
+
+			document.getElementById("app").innerHTML += `Candy limit: ${child.candyLimit}<br/>`;
+
+			//mom.giveChildCandyBag();
+			
+			setInterval(function(){ 
+				child.eatOneCandy();
+			 }, 1000);
+		</script>
+	</body>
+
+
+</html>
